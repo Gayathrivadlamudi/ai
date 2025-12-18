@@ -57,10 +57,10 @@ logesticPrediction=logesticModel.predict(X_test_scaled)
 decisionPredction=descisionModel.predict(X_test_scaled)
 
 #printing reports
-print("logestic clasifciatin report",)
+print("logestic clasifciatin report.",)
 print(classification_report(y_test,logesticPrediction,target_names=iris.target_names))
 
-print("decsinprediction")
+print("decsinprediction, is ")
 print(classification_report(y_test,decisionPredction,target_names=iris.target_names))
 
 #confusion matrix plots
