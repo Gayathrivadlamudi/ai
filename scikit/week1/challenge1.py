@@ -60,7 +60,7 @@ decisionPredction=descisionModel.predict(X_test_scaled)
 print("logestic clasifciatin report.",)
 print(classification_report(y_test,logesticPrediction,target_names=iris.target_names))
 
-print("decsinprediction, is ")
+print("decsinprediction, is good ")
 print(classification_report(y_test,decisionPredction,target_names=iris.target_names))
 
 #confusion matrix plots
