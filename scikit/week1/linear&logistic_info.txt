@@ -1,0 +1,30 @@
+scikit-learn has tools for machine learning
+linear regresion is for predicting numbers
+logestic regression is for predicting categories
+DecisionTree → for splitting rules
+SVM → for margins
+KNN → for neighbors
+RandomForest → many trees together
+Each model is a tool designed to solve a specific type of problem
+
+why linear regresssion
+because in real world many prblms require predicting numbers
+like for
+house price prediction
+temperature
+salary
+student marks
+stock values
+
+
+Why Logistic Regression exists
+Many real-world problems require predicting categories, not numbers:
+Is the email spam or not spam? (yes/no)
+Is the flower iris-setosa, iris-versicolor, iris-virginica? (3 classes)
+Will a customer buy a product? (yes/no)
+Linear regression cannot do this because it predicts real numbers.
+So scikit-learn provides:
+👉 LogisticRegression()
+which predicts:
+class A or class B
+class 0, 1, or 2
