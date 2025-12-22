@@ -71,4 +71,4 @@ scaler=StandardScaler() #it just first caluclates the means and sd after it tran
 x_trainScaled=scaler.fit_transform(x_train)
 x_testScaled=scaler.transform(x_test)
 print("Before scaling \n",x_train)
-print("after scalings hi  hi i am going to \n",x_testScaled)
+print("after scalings hi  hi i am going to learn \n",x_testScaled)
