@@ -1,0 +1,50 @@
+scikit is a machine learning library and by using this library we can build and test machine learning models
+scikit is like a toolbox
+and inside it have multiple packages
+✅ scikit-learn = sklearn
+They are just two names for the same library.
+scikit-learn → the official name (used for installation and documentation)
+sklearn → the import name (used inside your Python code)
+
+where by using this we can
+load and manage data that is we no need to downalod the data inside this library we will have data
+
+🧹 Clean and prepare your data
+
+🤖 Train different types of machine learning models
+
+📈 Check how good your model is
+
+Scikit-learn gives you small datasets already inside the library, like:
+
+load_iris() — flower data 🌸
+
+load_digits() — handwritten numbers ✍️
+
+load_diabetes() — health data 🧬
+
+load_wine() — wine quality 🍷
+
+from sklearn import datasets
+iris = datasets.load_iris()
+print("Feature names:", iris.feature_names)
+print("Target names:", iris.target_names)
+
+Scikit-learn is built using three main libraries:
+numpys: it helps work with numbers
+pandas: it helps work with tables
+matplotlib: it helps work with charts
+
+Together they support sklearn
+
+
+
+whats inside scikit library
+there are \
+datasets - load_iris()
+preprocessing - standardScaler() // helps clean/prepare data
+model_selection - train_test_split() //it helps split the data for traing and testing
+metrics- accuracy_score() //measures model accuracy
+linear_model - LinearRegression()     //has models like linear and logestic regression 
+tree,svm - DecisionTreeClassifier()
+
