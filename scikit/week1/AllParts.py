@@ -1,2 +1,2 @@
 import sklearn
-print(dir(sklearn))
+print(dir(sklearn),"sklearn")
