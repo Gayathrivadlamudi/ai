@@ -44,4 +44,4 @@ model.fit(x_train,y_train) #we are training the model will traing data
 #prediction
 pred=model.predict(x_test)
 #accuracy score
-print("accuray",accuracy_score(y_test,pred))
+print("accurcy",accuracy_score(y_test,pred))
