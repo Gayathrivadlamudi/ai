@@ -1,0 +1,151 @@
+why commits are fast in git
+Git saves only what changed
+when you commit 
+if a file didnt changed then it doesnt create new data it uses the old data only
+if a file changed,git saves only that content that is changed
+
+suppose we have 100 files
+and one file is changed
+then git saves
+1 new blob
+1 new tree reference
+1 new commit object
+that's why git take milliseconds to save the big projects
+
+if there are two files with same content then there will be only one blob points to the same contetnt
+EXAMPLE
+100644 blob 27562bc42c7a9db2cc8d4ffeb0e9ce3c20528f08    scaling copy.py
+100644 blob 27562bc42c7a9db2cc8d4ffeb0e9ce3c20528f08    scaling.py
+
+by using git checkout <commit hash code> we can revert the changes that we commited
+this doesnt mean that the newly commited hash will be deleted the head now points to the commit we mentioned
+A --- B --- C --- D   (main branch)
+You are currently on D
+main → D
+HEAD → main
+
+git checkout B
+
+A --- B --- C --- D
+      ↑
+     HEAD
+main ─────────────→ D
+
+this is about git commands
+
+first need to intilize the git
+git init
+
+then need to attach local git to remote git hub
+git remote add origin "http"
+
+then add the files to staged area
+git add .
+
+then we need to commit them
+git commit -m "message about commiting"
+
+then we need to push
+git push origin main
+
+if we create a git locally then we need to create empty rep in github
+then we need to push
+
+if we create a git remotely then first we need to pull the files from remote and
+then push the files from local to remote
+then push the files from local to remote
+
+by using git log
+we get the full history about
+commit hash
+author
+Date
+message what we committed
+
+git log --oneline --graph
+means
+unlike above it doesnt give all information in just one line it gives
+short commit hash and comit message
+graph means it gives short cut info like
+* means commit
+|\ means branch change
+| means branch continues
+example
+
+* b8b1cbb Adding allparts
+*   485d65a Merge branch 'main' of https://github.com/Gayathrivadlamudi/ai
+|\
+| * f83a49f Initial commit
+* f42606a commiting week2 for 1
+
+
+git show commithash
+means it will show the changes we did last time and now
+like
+--- a/scikit/week2/RandomForest.py
++++ b/scikit/week2/RandomForest.py
+-print("accuracy",accuracy_score(y_test,pred))
++print("accuracy is ",accuracy_score(y_test,pred))
+git show is difference btw the commit and its parent commit
+
+git diff commitA commitB
+this give difference between these two commits only
+
+Branching
+when we want to create a new feature and try new things on code without disturbing the other code
+we create a branch
+at start both default and newly created branch will point to same commit
+main -> c1
+newBranch -> c1
+
+git branch shows all the branches
+to create a new branch
+git branch branchName
+or
+git checkout -b branchName(to create a branch and switch to it)
+
+to switch to new branch
+git checkout branchName
+
+after that if we push the new branch
+again in we want same code as before we do
+git checkout hashcode
+and change the code and again we can push it
+
+now we need to merge branch
+we always should stand on branch and then we need to merge the new branch
+git checkout branch
+git branch
+*main
+then we need to do git merge feature
+if we change the same file same line in both branches then we get confilts
+git confuses which content to take
+so first we remove those line >> ---- like that
+and we add and commit and push the file after again
+we merge those branches
+
+git rever head
+
+this is wrong file
+now we commited this but we want to deleted this comit
+then we do revert head
+then it deletes the present head hash
+and then creates a new commit hash which points to previous one
+
+git restore file.txt means
+suppose we changed the file content
+but we didnt do any commit so if we want previioud contetnt
+then we use git restore file.txt
+
+
+
+
+
+
+
+
+
+
+
+
+

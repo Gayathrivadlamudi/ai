@@ -1,0 +1,18 @@
+express is framework for node
+this helps in routing
+builds apis
+and handles requests and responses
+
+const path=require("path") means it is built-in node js module we are importing it
+
+path.join(__dirname, "public", "index.html")
+path.join means it joins the folders safely
+__dirname means it give the folder path  where current js file located
+
+app.use(express.urlencoded({extended:true}));
+this middleware converts the form url data to orginal 
+
+i.e
+URLs cannot accept spaces and special characters
+so when we send the emails or passwords ,the browser changes them into another safe format
+after the server recieves it and changes to original format
